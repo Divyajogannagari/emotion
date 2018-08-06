@@ -12,6 +12,7 @@ http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/
 		<http:listener doc:name="Listener" doc:id="50d978fb-a9cb-4dc8-b021-e9045493314a" config-ref="HTTP_Listener_config" path="/test">
 			<ee:repeatable-file-store-stream />
 		</http:listener>
+		<set-payload value="#[payload]" doc:name="Set Payload" doc:id="a9e3a9a3-89ac-40f2-b9c9-bf29320871eb" />
 		<logger level="INFO" doc:name="Logger" doc:id="5ccc9286-271a-4fc3-8c5d-0a6026e8be36" message="keep smiling"/>
 	</flow>
 </mule>
